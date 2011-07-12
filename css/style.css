@@ -1,0 +1,151 @@
+/*
+Theme Name: X-Switcher
+Theme URI: http://www.woothemes.com/demo/
+Description: WooThemes Demos Switcher in theme form
+Author: Foxinni
+Version: 1.0
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+body, html  {
+	height: 100%; overflow:hidden;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 60px;
+    background: url(img/loading.gif) center center no-repeat;
+
+	font-family: Helvetica, Arial, Sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+
+a  { text-decoration: none; }
+
+/* END RESET */
+.hidden { display:none}
+#outside  { height: 60px; background: url(img/bg.jpg) repeat-x left top; }
+#inside  { width: 960px; margin: 0 auto; }
+#disable { z-index: 9999; width: 100%; height: 60px; position: absolute; background: black;}
+
+#logo  { margin-top: 17px; }
+
+#purchase  { padding: 5px 0 5px 36px; font-size: 14px; font-weight: bold; text-transform: uppercase; text-shadow: 1px 1px 0 #fff; color: #323232; background: url(img/ico-purchase.png) no-repeat left center; }
+#purchase:hover  { text-shadow: -1px -1px 0 #fff; }
+#close { position: absolute; top: 17px; right: 0; }
+.left a { display: block;}
+.left  { float: left; width: 180px; padding: 0 0 0 20px; }
+.right  { float: right; width: 725px; position: relative; }
+
+
+.dropdown  { position: relative; float: left; margin: 0 20px 0 0;  line-height: 1.5; font-size: 12px; color: #424242; }
+.dropdown a  { color: #424242; height: 40px; }
+
+
+.dropdown .list  { display: none; overflow: auto;  position: absolute; top: 15px; left: 0; padding: 9px 0 0 0; background: #ececec; border: 1px solid #adadad; box-shadow: 0 0 5px #727272; -moz-box-shadow: 0 0 5px #727272; -webkit-box-shadow: 0 0 5px #727272; }
+.dropdown .inside  {  overflow:auto; padding: 0; }
+.dropdown ul li  { display: block; padding: 0 10px; line-height: 30px; border-top: 1px solid #fff; border-bottom: 1px solid #d1d1d1; }
+.dropdown ul li:hover  { background: #e2e2e2; }
+
+.dropdown ul li.hidden { display:none}
+
+.dropdown ul li.active {
+	background: #dfdfdf;
+}
+
+
+
+#themes  {  margin-top: 17px; margin-right: 37px; }
+#themes .list {width: 322px;height: 400px; top:24px; padding:0}
+#themes .inside {width: 304px;}
+
+#themes h2 a  { position: relative; z-index: 500;  display: block; width: 316px; height: 21px; padding: 4px 0 0 10px; background: url(img/themedropdown.png) no-repeat left top; }
+#themes h2 a.up  {  background: url(img/themedropdownup.png) no-repeat left top; }
+#themes h2 a span { color:#aaa; font-weight: 100; font-size: 10px; margin-left: 10px;}
+
+
+#themes ul  { }
+#themes ul li   { float: left; width: 284px; position: relative; cursor: pointer; }
+#themes ul li  .leftbox  { float: left;}
+#themes ul li  .name  { font-size: 11px; font-weight: bold; text-shadow: 1px 1px 0 #fff; text-transform: uppercase; }
+#themes ul li  .date  { padding: 0 0 0 10px; font-size: 11px; text-transform: uppercase; color: #999999; line-height: 23px; }
+#themes ul li  .type  { float: right; display: inline; font-weight: bold; margin: 7px 0 0 0; padding: 3px 5px 2px 5px; font-size: 10px; text-transform: uppercase; background: #325c81; color: #fff; line-height: 10px; }
+#themes ul li .tooltip {
+	position: absolute; top: 20px; left: 180px; z-index: 999;
+}
+#themes ul li .tooltip div{	padding: 6px; background: rgba(20,20,20,0.4); border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+#themes ul li .tooltip div img{ border:1px solid black }
+
+#themes ul li .free { background: #941E24;}
+
+#preview{
+	z-index: 999;
+	position:absolute;
+	display:none;
+	padding:5px;
+	background: rgba(255,255,255,0.8) url('img/loading-bottom.gif') no-repeat 10px 10px;
+	border:1px solid #fff;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	height:225px;
+	width: 300px;
+}
+
+* html #preview{ background: #fff }
+*+html #preview{ background: #fff }   
+
+
+#styles  { width: 185px; margin-top: 17px; }
+#styles .list {width: 168px; top:24px; padding:0}
+#styles .inside {width: 168px;}
+#styles h2 a  { position: relative; z-index: 500; display: block; width: 161px; height: 21px; padding: 4px 0 0 10px; background: url(img/stylesdropdown.png) no-repeat left top; } 
+#styles h2 a.up  {  background: url(img/stylesdropdownup.png) no-repeat left top; }
+#styles ul  {  }
+#styles ul li   {padding: 0 6px; line-height: 24px; width: 155px;cursor: pointer; font-size: 11px; font-weight: bold; text-shadow: 1px 1px 0 #fff; text-transform: uppercase; }
+
+#styles .inside  { height: auto; overflow-y: visible; }
+
+
+/* http://sonspring.com/journal/clearing-floats */
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear
+{
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
