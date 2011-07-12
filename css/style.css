@@ -393,9 +393,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-de
 
 .entry ul  { margin-bottom: 1.5em; padding: 0 0 0 30px; }
 .entry ul ul  { margin: 0; }
-.entry ul li  {	list-style-type: disc; }
+/*.entry ul li  {	list-style-type: disc; }
 .entry ul ul li  { list-style-type: circle; }
-
+*/
 .entry ol  { margin-bottom: 1.5em; padding: 0 0 0 30px; }
 .entry ol ol  { margin: 0; }
 .entry  ol li  { list-style-type: decimal; }
