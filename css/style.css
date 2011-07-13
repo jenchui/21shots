@@ -384,7 +384,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {text-de
 #title-container .description { color:#BDC4CE; }
 
 /* 3.1 Typographic Elements */
-.entry, .entry p  { font:12px/1.8em sans-serif; }
+.entry, .entry p  { font:14px/1.8em sans-serif; }
 .single .entry { border-top: 1px solid #e9ebed; margin-top: 30px; padding-top: 30px; }
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 { margin:0 0 0.5em; line-height:1.5em; }
 .entry p  { margin-bottom: 1.2em; }
